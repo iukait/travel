@@ -2,8 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
-// Swiper 8.4.7
-// @import "vendor/swiper";
+
 
 // Global
 // ---------------------------------
@@ -14,6 +13,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "vendor/typography";
 
 // Blocks
 // ---------------------------------
@@ -23,6 +23,21 @@
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+
+// Header
+// ---------------------------------
+@import "blocks/header/header";
+@import "blocks/header/nav";
+@import "blocks/header/hero/hero";
+@import "blocks/header/hero/slider-list";
+@import "blocks/header/hero/bullet-list";
+
+// Main 
+// ---------------------------------
+
+
+// Footer
+//----------------------------------
 
 // ---------------------------------
 

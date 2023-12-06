@@ -1,0 +1,20 @@
+.bullet-list {
+  position:absolute;
+  display:flex;
+  gap: 20px;
+  justify-content: flex-end;
+  right:120px;
+  bottom: 16px;
+}
+
+.bullet-list__btn{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $color-default-white;
+  background-color: transparent;
+}
+
+.bullet-list__btn--active{
+  background-color: $color-default-white;
+}

@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
@@ -32,6 +34,9 @@ body {
   height: 100%;
 
   background-color: $color-default-white;
+
+  display:flex;
+  flex-direction:column;
 }
 
 a {
@@ -44,6 +49,10 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+ul,ol {
+  list-style:none;
 }
 
 textarea {

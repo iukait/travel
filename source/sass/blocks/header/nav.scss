@@ -1,0 +1,44 @@
+.nav {
+  display:flex;
+  flex-wrap:wrap;
+  flex-grow:1;
+
+}
+
+.nav__list {
+  display:flex;
+  flex-wrap:wrap;
+  flex-wrap:wrap;
+  gap:19px;
+  flex-grow:1;
+  justify-content:center;
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+  font-size: $fz-default;  
+  font-weight: 400;
+  line-height: 100% ;
+  color:$color-default-white;
+  border: 1px solid $color-transparent; 
+  padding: 3px 5px;
+
+  &:hover{
+    border-bottom: 1px solid $color-default-white; 
+  }
+
+  &:focus {
+    border: 1px solid $color-default-white; 
+    padding: 3px 5px;
+    outline:none;
+  }
+  
+}
+
+.nav__tel {
+  margin-left: auto;
+
+}
