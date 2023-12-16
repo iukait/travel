@@ -1,13 +1,29 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
-import {Form} from './modules/form-validate/form';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+import { Form } from './modules/form-validate/form';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
+  const playBtn = document.querySelector('.slider-list__play-btn');
+  const video = document.getElementById('video-id');
+  const cover = document.querySelector('.slider-list__video-cover');
+
+  const menuBtn = document.querySelector('.nav__btn');
+  const navBar = document.querySelector('.nav');
+
+
+  playBtn.addEventListener('click', () => {
+    video.src += '&autoplay=1';
+    playBtn.style.display = 'none';
+    cover.style.display = 'none';
+  });
+
+  menuBtn.addEventListener('click', () => {
+    navBar.classList.toggle('is-closed');
+
+  })
 
   iosVhFix();
 

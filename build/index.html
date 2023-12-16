@@ -8,9 +8,9 @@
     <title>Travel</title>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="body">
 
-    <header class="header">
+    <header class="header" data-test="hero">
       <div class=" header__container container">
         <a href="#" class="header__logo">
           <svg class="header__logo-svg" width="205" height="62"
@@ -19,6 +19,15 @@
           </svg>
         </a>
         <nav class="header__nav nav">
+          <button class="nav__btn " type="button ">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 3.54541H26V5.71534H0V3.54541Z" fill="white" />
+              <path d="M0 20.2846H26V22.4545H0V20.2846Z" fill="white" />
+              <path d="M0 11.915H16.64V14.0849H0V11.915Z" fill="white" />
+            </svg>
+            <span class="visually-hidden">Кнопка меню</span>
+          </button>
           <ul class="nav__list">
             <li class="nav__item">
               <a href class="nav__link">Туры</a>
@@ -37,219 +46,137 @@
         </nav>
         <a class="header__tel" href="tel:88007253232">8 800 725-32-32</a>
       </div>
+      <section class="header__hero hero ">
+        <div class="hero__conteiner ">
+          <ul class="hero__slider-list slider-list">
+            <li
+              class="slider-list__item slider-list__item--active   slider-list__item--1">
+              <div class="slider-list__wrapper">
+                <h1>Захватывающие вершины Кавказа</h1>
+                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на&nbsp;вершину горы Чегет.</p>
+                <a href="#" class="slider-list__btn">Смотреть тур</a>
+                <div class="slider-list__wrapper-span">
+                  <p class="slider-list__info slider-list__info--moon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./img/sprite/moon.svg#moon"></use>
+                    </svg>
+                    6 дней/5 ночей
+                  </p>
+                  <p class="slider-list__info slider-list__info--level">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./img/sprite/level.svg#level"></use>
+                    </svg>
+                    Высокая сложность
+                  </p>
+                </div>
+
+                <div class="slider-list__wrapper-img">
+                  <div class="slider-list__video-cover">
+                    <button class="slider-list__play-btn">
+                      <svg  width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 11L0 0V22L12 11Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <picture>
+                      <source media="(max-width:767px)"  srcset="  ./img/hero/slider-1-mobile.webp    1x, ./img/hero/slider-1-mobile@2x.webp 2x"  width="320"  height="167" type="image/webp" />
+                      <source  media="(max-width:1439px)"  srcset=" ./img/hero/slider-1-tablet.webp  1x, ./img/hero/slider-1-tablet@2x.webp 2x  " width="442" height="300" type="image/webp" />
+                      <img src="img/hero/slider-1-desktop.jpg"  width="482" height="317" srcset="./img/hero/slider-1-desktop.webp    1x,  ./img/hero/slider-1-desktop@2x.webp 2x "  alt="видео гор Алтайского края" />
+                    </picture>
+                  </div>
+                  <div class="slider-list__video-iframe">
+                    <iframe
+                      id="video-id"  width="482"  height="317" src="https://www.youtube.com/watch?v=9TZXsZItgdw"
+                      title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="slider-list__item  slider-list__item slider-list__item--2">
+              <div class="slider-list__wrapper">
+                <h1>Невероятная  природа Камчатки</h1>
+                <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой  природы  в мире.</p>
+                <a href="#" class="slider-list__btn">Смотреть тур</a>
+                <div class="slider-list__wrapper-span">
+                  <p class="slider-list__info slider-list__info--moon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"  xmlns="http://www.w3.org/2000/svg">
+                      <use href="./img/sprite/moon.svg#moon"></use>
+                    </svg>
+                    9 дней/10 ночей
+                  </p>
+                  <p class="slider-list__info slider-list__info--level">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./img/sprite/level.svg#level"></use>
+                    </svg>
+                    Средняя сложность
+                  </p>
+                </div>
+                <div class="slider-list__wrapper-img">
+                  <picture>
+                    <source media="(max-width:767px)"srcset="./img/hero/slider-2-mobile.webp    1x,./img/hero/slider-2-mobile@2x.webp 2x"/>
+                    <source  media="(max-width:1365px)"  srcset="./img/hero/slider-2-tablet.webp    1x, ./img/hero/slider-2-tablet@2x.webp 2x"/>                     
+                    <img class=" hero__slider-photo hero__slider-photo--1" src="img/hero/slider-2-desktop-photo-2.jpg" alt="озеро в горах" width="277"   height="399" srcset=" ./img/hero/slider-2-desktop-photo-2.webp    1x,./img/hero/slider-2-desktop-photo-2@2x.webp 2x"/>                     
+                  </picture>
+                  <picture>
+                    <source media="(max-width:767px)"  srcset="./img/hero/slider-2-mobile.webp    1x,  ./img/hero/slider-2-mobile@2x.webp 2x "
+                      width="320"  height="167"  type="image/webp" />
+                    <source  media="(max-width:1439px)" srcset=" ./img/hero/slider-2-tablet.webp    1x, ./img/hero/slider-2-tablet@2x.webp 2x"
+                      width="265" height="167"  type="image/webp" />
+                    <img class=" hero__slider-photo hero__slider-photo--2"  width="308" height="407"                     
+                      srcset="./img/hero/slider-2-desktop.webp    1x,./img/hero/slider-2-desktop-@2x.webp 2x "
+                      src="img/hero/slider-2-desktop.jpg" alt="девушка идет в гору" />
+                  </picture>
+                </div>
+              </div>
+            </li>
+            <li
+              class="slider-list__item  slider-list__item--3">
+              <div class="slider-list__wrapper">
+                <h1>Магические пейзажи Алтайского Края</h1>
+                <p></p>
+                <a href class="slider-list__btn">Смотреть тур</a>
+                <div class="slider-list__wrapper-span">
+                  <p class="slider-list__info slider-list__info--moon">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./img/sprite/moon.svg#moon"></use>
+                    </svg>
+                    6 дней/5 ночей
+                  </p>
+                  <p class="slider-list__info slider-list__info--level">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use href="./img/sprite/level.svg#level"></use>
+                    </svg>
+                    Легкая сложность
+                  </p>
+                </div>
+                <div class="hero__wrapper-wijet">
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ol class="hero__bullet-list bullet-list">
+            <li class="bullet-list__item">
+              <button  class="bullet-list__btn bullet-list__btn--active"  type="button">
+                <span class="visually-hidden">1 слайд</span>
+              </button>
+            </li>
+            <li class="bullet-list__item">
+              <button class="bullet-list__btn" type="button">
+                <span class="visually-hidden">2 слайд</span>
+              </button>
+            </li>
+            <li class="bullet-list__item">
+              <button class="bullet-list__btn" type="button">
+                <span class="visually-hidden">3 слайд</span>
+              </button>
+            </li>
+          </ol>
+        </div>
+      </section>
     </header>
-    <section class="header__hero hero">
-      <div class="hero__conteiner container">
 
-        <ul class="hero__slider-list slider-list">
-          <li
-            class="slider-list__item   slider-list__item--1">
-            <h1>Захватывающие вершины Кавказа</h1>
-            <p>В сопровождении опытных гидов вы пройдёте через потрясающие
-              ландшафты и совершите восход на вершину горы Чегет.</p>
-            <a href="#" class="slider-list__btn">Смотреть тур</a>
-            <div class="slider-list__wrapper-link">
-              <a href="#" class="slider-list__link slider-list__link--moon">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <use href="./img/sprite/moon.svg#moon"></use>
-                </svg>
-                6 дней/5 ночей
-              </a>
-              <a href="#" class="slider-list__link slider-list__link--level">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <use href="./img/sprite/level.svg#level"></use>
-                </svg>
-                Высокая сложность
-              </a>
-            </div>
-            <div class="hero__wrapper-img">
-              <div class="hero__video-cover">
-                <picture>
-                  <source
-                    media="(max-width:767px)"
-                    srcset="
-                    ./img/hero/slider-1-mobile.webp    1x,
-                    ./img/hero/slider-1-mobile@2x.webp 2x
-                  "
-                    width="320"
-                    height="167"
-                    type="image/webp" />
-                  <source
-                    media="(max-width:1365px)"
-                    srcset="
-                    ./img/hero/slider-1-tablet.webp    1x,
-                    ./img/hero/slider-1-tablet@2x.webp 2x
-                  "
-                    width="265"
-                    height="167"
-                    type="image/webp" />
-                  <img
-                    width="482"
-                    height="317"
-                    srcset="
-                    ./img/hero/slider-1-desktop.webp    1x,
-                    ./img/hero/slider-1-desktop@2x.webp 2x
-                  "
-                    src="img/hero/slider-1-desktop.jpg"
-                    alt="видео гор Алтайского края" />
-                </picture>
-              </div>
-              <div class="hero__video-iframe">
-                <iframe
-                  id="video-id"
-                  width="482"
-                  height="317"
-                  src="https://www.youtube.com/watch?v=9TZXsZItgdw"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-          </li>
-          <li
-            class="slider-list__item slider-list__item--active slider-list__item--2">
-            <h1>Невероятная
-              природа Камчатки</h1>
-            <p>забываемое приключение, во время которого вы отправитесь в
-              путешествие по одному из самых нетронутых уголков дикой природы в
-              мире.</p>
-            <a href="#" class="slider-list__btn">Смотреть тур</a>
-            <a href="#" class="slider-list__link slider-list__link--moon">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <use href="./img/sprite/moon.svg#moon"></use>
-              </svg>
-              9 дней/10 ночей
-            </a>
-            <a href="#" class="slider-list__link slider-list__link--level">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <use href="./img/sprite/level.svg#level"></use>
-              </svg>
-              Средняя сложность
-            </a>
-
-            <div class="hero__wrapper-img">
-              <div class="hero__video-cover">
-                <picture>
-                  <source
-                    media="(max-width:767px)"
-                    srcset="
-                    ./img/hero/slider-2-mobile.webp    1x,
-                    ./img/hero/slider-2-mobile@2x.webp 2x
-                  "
-                    width="320"
-                    height="167"
-                    type="image/webp" />
-                  <source
-                    media="(max-width:1365px)"
-                    srcset="
-                    ./img/hero/slider-2-tablet.webp    1x,
-                    ./img/hero/slider-2-tablet@2x.webp 2x
-                  "
-                    width="265"
-                    height="167"
-                    type="image/webp" />
-                  <img
-                    width="482"
-                    height="317"
-                    srcset="
-                    ./img/hero/slider-2-desktop-photo-2.webp    1x,
-                    ./img/hero/slider-2-desktop-photo-2@2x.webp 2x
-                  "
-                    src="img/hero/slider-2-desktop-photo-2.jpg"
-                    alt="видео гор Алтайского края" />
-                </picture>
-              </div>
-
-            </div>
-          </li>
-          <li class="slider-list__item slider-list__item--3">
-            <h1>Магические пейзажи Алтайского Края</h1>
-            <p></p>
-            <a href class="slider-list__btn">Смотреть тур</a>
-            <a href="#" class="slider-list__link slider-list__link--moon">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <use href="./img/sprite/moon.svg#moon"></use>
-              </svg>
-              6 дней/5 ночей
-            </a>
-            <a href="#" class="slider-list__link slider-list__link--level">
-              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <use href="./img/sprite/level.svg#level"></use>
-              </svg>
-            </a> <div class="hero__wrapper-img">
-              <div class="hero__video-cover">
-                <picture>
-                  <source
-                    media="(max-width:767px)"
-                    srcset="
-                  ./img/hero/slider-1-mobile.webp    1x,
-                  ./img/hero/slider-1-mobile@2x.webp 2x
-                "
-                    width="320"
-                    height="167"
-                    type="image/webp" />
-                  <source
-                    media="(max-width:1365px)"
-                    srcset="
-                  ./img/hero/slider-1-tablet.webp    1x,
-                  ./img/hero/slider-1-tablet@2x.webp 2x
-                "
-                    width="265"
-                    height="167"
-                    type="image/webp" />
-                  <img
-                    width="482"
-                    height="317"
-                    srcset="
-                  ./img/hero/slider-1-desktop.webp    1x,
-                  ./img/hero/slider-1-desktop@2x.webp 2x
-                "
-                    src="img/hero/slider-1-desktop.jpg"
-                    alt="видео гор Алтайского края" />
-                </picture>
-              </div>
-              <div class="hero__video-iframe">
-                <iframe
-                  id="video-id"
-                  width="482"
-                  height="317"
-                  src="https://www.youtube.com/watch?v=9TZXsZItgdw"
-                  title="YouTube video player"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-
-        <ol class="hero__bullet-list bullet-list">
-          <li class="bullet-list__item">
-            <button
-              class="bullet-list__btn bullet-list__btn--active"
-              type="button">
-              <span class="visually-hidden">1 слайд</span>
-            </button>
-          </li>
-          <li class="bullet-list__item">
-            <button class="bullet-list__btn" type="button">
-              <span class="visually-hidden">2 слайд</span>
-            </button>
-          </li>
-          <li class="bullet-list__item">
-            <button class="bullet-list__btn" type="button">
-              <span class="visually-hidden">3 слайд</span>
-            </button>
-          </li>
-        </ol>
-      </div>
-    </section>
     <main class="main">
       <section class="main__hero hero">
 

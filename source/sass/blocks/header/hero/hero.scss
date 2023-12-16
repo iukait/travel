@@ -1,40 +1,8 @@
 .hero {
-  position: relative;
-  padding-top: 74px;
+  position: relative; 
 }
 
-.header:after{
-  position:absolute;
-  content:"";
-  background:url(../img/hero/hero-desktop.jpg) no-repeat center center;
-  top:-67px;
-  left:0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
 
-.header__img picture {
-  width: 100%;
-}
 
-.header__img img {
-  width: 100%;
-  height: auto; /* Это обеспечит сохранение пропорций при изменении ширины */
-}
 
-.hero__video-cover {
-  position: absolute; 
-  right: 120px;
-  bottom: 75px;
-  z-index:2;
-}
-
-.hero__video-iframe {
-  position: absolute; 
-  right: 120px;
-  bottom: 75px;
-  z-index: 1;
-  max-height: 317px;
-}
 

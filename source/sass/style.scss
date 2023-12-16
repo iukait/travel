@@ -9,11 +9,12 @@
 
 @import "variables";
 @import "mixins";
+@import "vendor/typography";
 @import "global/fonts";
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
-@import "vendor/typography";
+
 
 // Blocks
 // ---------------------------------
@@ -27,6 +28,7 @@
 // Header
 // ---------------------------------
 @import "blocks/header/header";
+@import "blocks/header/slider";
 @import "blocks/header/nav";
 @import "blocks/header/hero/hero";
 @import "blocks/header/hero/slider-list";
